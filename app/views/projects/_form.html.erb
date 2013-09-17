@@ -32,24 +32,24 @@ See doc/COPYRIGHT.rdoc for more details.
 <div class="box">
   <!--[form:project]-->
 
-  <%= render :partial => "projects/form/project_attributes", :locals => { :project => @project, :form => f } %>
+  <%= render :partial => "projects/form/project_attributes", :locals => { :project => project, :form => f } %>
 
   <%# former timelines hook: %>
-  <%= render :partial => 'projects/form/timelines_attributes', :locals => { :project => @project, :form => f } %>
+  <%= render :partial => 'projects/form/timelines_attributes', :locals => { :project => project, :form => f } %>
 
-  <%= call_hook(:view_projects_form, :project => @project, :form => f) %>
+  <%= call_hook(:view_projects_form, :project => project, :form => f) %>
 </div>
 
-<% if @project.new_record? %>
-  <%= render :partial => "projects/form/modules", :locals => { :project => @project } %>
+<% if project.new_record? %>
+  <%= render :partial => "projects/form/modules", :locals => { :project => project } %>
 <% end %>
 
-<% if @project.new_record? || @project.module_enabled?('issue_tracking') %>
-  <%= render :partial => "projects/form/types", :locals => { :project => @project, :types => @types } %>
+<% if project.new_record? || project.module_enabled?('issue_tracking') %>
+  <%= render :partial => "projects/form/types", :locals => { :project => project, :types => @types } %>
 <% end %>
 
 <% unless @issue_custom_fields.empty? %>
-  <%= render :partial => "projects/form/custom_fields", :locals => { :project => @project,
+  <%= render :partial => "projects/form/custom_fields", :locals => { :project => project,
                                                        :issue_custom_fields => @issue_custom_fields } %>
 <% end %>
 <!--[eoform:project]-->
