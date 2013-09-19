@@ -29,7 +29,9 @@ See doc/COPYRIGHT.rdoc for more details.
 
 # Changelog
 
-* `#1770` New Comment Section layout errors 
+* `#1770` New Comment Section layout errors
+* `#1949` External links within modals do not work
+* `#1946` Modal shown within in Modal
 
 ## 3.0.0pre17
 
