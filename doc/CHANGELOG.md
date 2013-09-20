@@ -29,6 +29,8 @@ See doc/COPYRIGHT.rdoc for more details.
 
 # Changelog
 
+* `#1560` WorkPackage/update doesn't retain some fields when validations fail 
+
 ## 3.0.0pre17
 
 * `#1323` Wrong Calendarweek in Datepicker, replaced built in datepicker with jQuery UI datepicker
